@@ -7,23 +7,23 @@ import numpy as np
 
 # a function definition of the sigmoid function, activation function
 
-def nonlin(x,deriv=False):
-    if (deriv == True)
+def nonlin(x, deriv=False):
+    if (deriv == True):
         return (x*(1-x))
 
     return 1/(1+np.exp(-x))
 
 # input data
-X = np.array([[0,0,1]
-             [0,1,1]
-             [1,0,1]
+X = np.array([[0,0,1],
+             [0,1,1],
+             [1,0,1],
              [1,1,1]])
 
 
 # output data
-y = np.array([[0]
-             [1]
-             [1]
+y = np.array([[0],
+             [1],
+             [1],
              [0]])
 
 
@@ -43,11 +43,11 @@ np.random.seed(1)
 
 syn0 = 2*np.random.random((3,4)) -1  # 3x4 matrix of weights
 
-syn1 = 2.np.random.random((4,1))
+syn1 = 2*np.random.random((4,1))
 
 # training step
 
-for j in range(60000)
+for j in range(90000):
 
     # calculate forward through the network
     l0 = X
@@ -55,7 +55,7 @@ for j in range(60000)
     l2 = nonlin(np.dot(l1, syn1))
 
     l2_error = y - l2
-    if (j % 10000) == 0 #print error every 10000 steps
+    if (j % 10000) == 0: #print error every 10000 steps
         print("Error: " + str(np.mean(np.abs(l2_error))))
 
     l2_delta = l2_error*nonlin(l2, deriv=True)
