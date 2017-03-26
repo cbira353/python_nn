@@ -1,8 +1,6 @@
-Practicing coding in Python. This one is a neural net explained by Siraj Raval in a tutorial. Main import is Numpy. 
-
 Practice coding for creating a Neural Net
 using Numpy simulating the exclusive OR function
-with two inputs and one output
+with two inputs and one output. This one is a neural net explained by Siraj Raval in a tutorial. Main import is Numpy. 
 ```
 import numpy as np
 ```
