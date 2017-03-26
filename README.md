@@ -48,8 +48,8 @@ randomly
 Synapses
 ```
 #a 3x4 matrix of weights; two inputs and 1 bias x 4 nodes in the hidden layer
-
 syn0 = 2*np.random.random((3,4)) -1  # 3x4 matrix of weights
+
 # a 4x1 matrix of weights (4 nodes x 1 output)
 syn1 = 2*np.random.random((4,1))
 ```
@@ -57,7 +57,7 @@ syn1 = 2*np.random.random((4,1))
 The training loop. Output will show the error between the model and expected. The error decreases. 
 
 ```
-for j in range(90000):
+for j in range(60000):
 
     # calculate forward through the network
     l0 = X
@@ -92,7 +92,7 @@ print (l2)
 ```
 
 
-Output:
+Output (Error rate decreases per epoch)
 ```
 python_nn$ python3 PythonNNExampleMBI.py 
 
